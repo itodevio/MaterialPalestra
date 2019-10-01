@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Totem.gd" type="Script" id=1]
+[ext_resource path="res://Bullet.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Sprites/Buff Totem Donezo.png" type="Texture" id=3]
+
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 9.40311
+height = 0.483276
+
+[node name="Totem" type="StaticBody2D"]
+position = Vector2( 447.934, 273.044 )
+script = ExtResource( 1 )
+Bullet = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 83.75, 9.75, 17.75, 23 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.214467, 2.36709 )
+shape = SubResource( 3 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
