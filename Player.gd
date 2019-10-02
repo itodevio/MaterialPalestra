@@ -3,6 +3,8 @@ extends KinematicBody2D
 var speed = 200
 var key = false
 var life = 6
+var has_key = false
+var can_take_damage = true
 
 var velocity = Vector2()
 
@@ -29,6 +31,11 @@ func get_input():
 
 func _physics_process(delta):
 
+	if key:
+		key = false
+		has_key = true
+		$Camera2D/HUD.update_key()
+
 	get_input()
 	
 
@@ -48,16 +55,30 @@ func _physics_process(delta):
 	
 
 func hit(damage):
-	life -= damage
+	
+	if can_take_damage:
+		life -= damage
+	
+	$Camera2D/HUD.update_life(life)
 	
 	if life == 0:
 		end()
+		
+	can_take_damage = false
+	
+	for i in 4:
+        $AnimatedSprite.self_modulate.a = 0
+        yield(get_tree().create_timer(0.1), 'timeout')
+        $AnimatedSprite.self_modulate.a = 1
+        yield(get_tree().create_timer(0.1), 'timeout')
+	yield(get_tree().create_timer(0.2), 'timeout')
+	
+	can_take_damage = true
 
 func end():
 	get_tree().reload_current_scene()
 	
-func get_key():
-	pass
+
 	
 	
 	

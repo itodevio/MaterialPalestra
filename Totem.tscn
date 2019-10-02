@@ -31,7 +31,7 @@ Bullet = ExtResource( 2 )
 [node name="Sprite" type="AnimatedSprite" parent="."]
 position = Vector2( -0.69931, -5.59436 )
 frames = SubResource( 2 )
-frame = 4
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

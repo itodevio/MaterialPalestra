@@ -19,7 +19,7 @@ func _on_Key_body_entered(body):
 
 
 func _on_BauArea_body_entered(body):
-	if body.name == 'Player' and body.key:
+	if body.name == 'Player' and body.has_key:
 		end_game()
 
 func end_game():
