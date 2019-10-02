@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Bullet.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/Fire TotemSprite Sheet.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/bullet.png" type="Texture" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 6.10667
@@ -12,14 +12,13 @@ position = Vector2( 0.226246, -0.226248 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 1 )
 __meta__ = {
-"_edit_group_": true,
 "_edit_horizontal_guides_": [ -79.9623 ]
 }
 
 [node name="Sprite" type="Sprite" parent="."]
-scale = Vector2( 3.08619, 3.08619 )
+position = Vector2( -0.962112, -0.426178 )
+scale = Vector2( 3.02003, 3.02003 )
 texture = ExtResource( 2 )
-region_enabled = true
 region_rect = Rect2( 231.5, 71.25, 14, 9.75 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -28,7 +27,7 @@ rotation = 1.5708
 shape = SubResource( 1 )
 
 [node name="LifeTime" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 3.0
 autostart = true
 
 [connection signal="body_entered" from="." to="." method="_on_Bullet_body_entered"]

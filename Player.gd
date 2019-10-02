@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 var speed = 200
-
+var key = false
 var life = 6
 
 var velocity = Vector2()
@@ -28,6 +28,7 @@ func get_input():
 
 
 func _physics_process(delta):
+
 	get_input()
 	
 
@@ -35,7 +36,7 @@ func _physics_process(delta):
 		if $AnimatedSprite.animation != 'verticalWalk':
 			$AnimatedSprite.animation = 'verticalWalk' 
 	
-	elif velocity.x != 0:
+	elif velocity.x != 0 or velocity.y != 0:
 		if $AnimatedSprite.animation != 'horizontalWalk':
 			$AnimatedSprite.animation = 'horizontalWalk'
 	
@@ -55,7 +56,8 @@ func hit(damage):
 func end():
 	get_tree().reload_current_scene()
 	
-	
+func get_key():
+	pass
 	
 	
 	

@@ -17,3 +17,7 @@ func shoot():
 func _on_AnimatedSprite_frame_changed():
 	if $AnimatedSprite.animation == "attack" and $AnimatedSprite.frame == 3:
 		shoot()		
+
+
+func _on_Timer_timeout():
+	pass # Replace with function body.
