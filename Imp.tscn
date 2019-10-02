@@ -2,12 +2,12 @@
 
 [ext_resource path="res://Imp.gd" type="Script" id=1]
 [ext_resource path="res://Bullet.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Sprites/ImpSingles/sprite_imp16.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/ImpSingles/sprite_imp17.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/ImpSingles/sprite_imp18.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/ImpSingles/sprite_imp19.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/ImpSingles/sprite_imp20.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/ImpSingles/sprite_imp21.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/ImpSprites/sprite_imp16.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/ImpSprites/sprite_imp17.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/ImpSprites/sprite_imp18.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/ImpSprites/sprite_imp19.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/ImpSprites/sprite_imp20.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/ImpSprites/sprite_imp21.png" type="Texture" id=8]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -29,7 +29,7 @@ Bullet = ExtResource( 2 )
 position = Vector2( -9.25549, -11.4146 )
 frames = SubResource( 1 )
 animation = "attack"
-frame = 1
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

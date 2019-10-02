@@ -20,7 +20,10 @@ func _on_Key_body_entered(body):
 
 func _on_BauArea_body_entered(body):
 	if body.name == 'Player' and body.has_key:
+		body.hide_key()
 		end_game()
 
 func end_game():
-	print('acabou')
+	$Player.ended = true
+	yield(get_tree().create_timer(1.5), 'timeout')
+	get_tree().change_scene('res://Ending.tscn')

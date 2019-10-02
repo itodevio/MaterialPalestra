@@ -5,11 +5,15 @@ var key = false
 var life = 6
 var has_key = false
 var can_take_damage = true
-
+var ended = false
 var velocity = Vector2()
 
 func get_input():
+		
 	velocity = Vector2.ZERO
+	
+	if ended:
+		return
 	
 	if Input.is_action_pressed('ui_right'):
 		velocity.x += 1
@@ -78,8 +82,8 @@ func hit(damage):
 func end():
 	get_tree().reload_current_scene()
 	
-
-	
+func hide_key():
+	$Camera2D/HUD/Key.hide()
 	
 	
 	
