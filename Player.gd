@@ -43,7 +43,7 @@ func _physics_process(delta):
 	get_input()
 	
 
-	if velocity.y == -200:
+	if velocity.y < 0:
 		if $AnimatedSprite.animation != 'verticalWalk':
 			$AnimatedSprite.animation = 'verticalWalk' 
 	

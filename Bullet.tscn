@@ -4,12 +4,11 @@
 [ext_resource path="res://Sprites/bullet.png" type="Texture" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 6.10667
-height = 17.29
+radius = 3.10553
+height = 8.37829
 
 [node name="Bullet" type="Area2D"]
 position = Vector2( 0.226246, -0.226248 )
-scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_horizontal_guides_": [ -79.9623 ]
@@ -17,12 +16,12 @@ __meta__ = {
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( -0.962112, -0.426178 )
-scale = Vector2( 3.02003, 3.02003 )
+scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 2 )
 region_rect = Rect2( 231.5, 71.25, 14, 9.75 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0.961548, -0.395933 )
+position = Vector2( 0.111336, -0.4904 )
 rotation = 1.5708
 shape = SubResource( 1 )
 

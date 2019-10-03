@@ -29,7 +29,6 @@ Bullet = ExtResource( 2 )
 position = Vector2( -9.25549, -11.4146 )
 frames = SubResource( 1 )
 animation = "attack"
-frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
